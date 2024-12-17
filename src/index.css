@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.das{
+  border: 1px solid #c1c1c1;
+    border-radius: 16px;
+    box-shadow: 1px 4px 4px 0px rgba(165, 165, 165, 0.25);
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+
+ /* Scrollbar styling */
+ ::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (background of scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Handle (draggable part of scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #007BFF; /* Blue handle */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #f0f0f0; /* Space around the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Darker blue when hovered */
+}
+
+.item-li{
+  text-decoration: none;
+  list-style-type: none;
+}
+

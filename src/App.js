@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Uses from "./Uses";
 import Count from "./Count";
+import Items from "./Items";
 import "./App.css"; // For styling
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Items/>
       <Count/>
       <Uses/>
       <button onClick={togglePopup} className="login-button">
