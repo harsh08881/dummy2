@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Uses from "./Uses";
 import "./App.css"; // For styling
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Uses/>
       <button onClick={togglePopup} className="login-button">
         Login
       </button>
