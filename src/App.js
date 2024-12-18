@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Uses from "./Uses";
 import Count from "./Count";
 import Items from "./Items";
+import FetchData from "./Api";
 import "./App.css"; // For styling
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <FetchData/>
       <Items/>
       <Count/>
       <Uses/>
