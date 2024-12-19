@@ -43,6 +43,29 @@ const OptionChain = () => {
           </div>
         ))}
       </div>
+      <div className="option-cards-container">
+  {optionData?.records?.data?.map((strike, index) => (
+    <div key={index} className="option-card">
+      <div className="card-header">
+        <h2 className="strike-price">Strike Price: {strike?.PE?.strikePrice}</h2>
+        <span className="expiry-date">Expiry: {strike.expiryDate}</span>
+      </div>
+      <div className="card-content">
+        <p><strong>OI:</strong> {strike?.PE?.openInterest}</p>
+        <p><strong>Change in OI:</strong> {strike?.PE?.changeinOpenInterest}</p>
+        <p><strong>Volume:</strong> {strike?.PE?.totalTradedVolume}</p>
+        <p><strong>IV:</strong> {strike?.PE?.impliedVolatility}%</p>
+        <p><strong>Last Price:</strong> ₹{strike?.PE?.lastPrice}</p>
+        <p><strong>Price Change:</strong> ₹{strike?.PE?.change} ({strike.pChange}%)</p>
+        <div className="bid-ask">
+          <p><strong>Bid:</strong> ₹{strike?.PE?.bidprice} ({strike?.PE?.bidQty})</p>
+          <p><strong>Ask:</strong> ₹{strike?.PE?.askPrice} ({strike?.PE?.askQty})</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };
