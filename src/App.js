@@ -6,6 +6,7 @@ import Items from "./Items";
 import FetchData from "./Api";
 import Toogle from './Toogle';
 import ErrorPage from "./Error";
+import NotFound from "./NotFound";
 import "./App.css"; // For styling
 
 
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/fetchdata',
-    element: <Toogle />,
+    element: <FetchData />,
+  },
+  {
+    path: '*',
+    element:<NotFound/>,
   },
 ]);
 

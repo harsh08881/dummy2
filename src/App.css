@@ -85,3 +85,19 @@ button{
   margin: 16px;
   padding: 5px;
 }
+
+
+.notfound {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           /* Makes the div take the full height of the viewport */
+  font-size: 24px;         /* Optional: adjust the font size */
+  text-align: center;      /* Optional: centers the text inside the div */
+}
+
+div span {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ff0000;             /* Optional: customize text color */
+}
