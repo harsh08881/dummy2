@@ -1,55 +1,33 @@
-import React, { useState } from "react";
-import Uses from "./Uses";
+import React from "react";
+import { createBrowserRouter, RouterProvider ,Outlet } from "react-router-dom";
+import Uses from "./Use";
 import Count from "./Count";
 import Items from "./Items";
 import FetchData from "./Api";
+import Toogle from './Toogle';
+import ErrorPage from "./Error";
 import "./App.css"; // For styling
 
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Items />,
+    errorElement: <ErrorPage />, // For handling errors on this route
+  },
+  {
+    path: '/use',
+    element: <Uses />,
+  },
+  {
+    path: '/fetchdata',
+    element: <Toogle />,
+  },
+]);
+
+
 const App = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  // Function to toggle popup visibility
-  const togglePopup = () => {
-    setIsPopupOpen(!isPopupOpen);
-  };
-
-  return (
-    <div className="App">
-      <FetchData/>
-      <Items/>
-      <Count/>
-      <Uses/>
-      <button onClick={togglePopup} className="login-button">
-        Login
-      </button>
-
-      {isPopupOpen && (
-        <div className="popup-overlay">
-          <div className="popup-box">
-            <button onClick={togglePopup} className="close-button">
-              &times;
-            </button>
-            <h2>Login</h2>
-            <form>
-              <label>
-                Email:
-                <input type="email" placeholder="Enter your email" />
-              </label>
-              <br />
-              <label>
-                Password:
-                <input type="password" placeholder="Enter your password" />
-              </label>
-              <br />
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

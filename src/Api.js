@@ -30,12 +30,15 @@ function FetchData() {
       setLoading(true);
       setError(null);
       try {
+        console.log("jkjg");
         const result = await fetchWithRetry("https://jsonplaceholder.typicode.com/posts");
         setData(result);
       } catch (err) {
+        console.log("err")
         setError(err.message);
       } finally {
         setLoading(false);
+        console.log("set");
       }
     };
 

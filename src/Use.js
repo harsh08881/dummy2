@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 
 const Uses = () => {
@@ -16,8 +17,6 @@ const Uses = () => {
          <div>Hello {Name}</div>
          
          { Name === "Manshi" ? <p>You Win</p> : <p>You Lose</p> }
-        
-         
      <button onClick={handclick}>Click Me</button>
     </div>
   )

@@ -1,31 +1,36 @@
-import React from 'react'
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Items = () => {
-    const [items, setItems] = useState([]); // Initialize an empty array
+  const [items, setItems] = useState([]); // Initialize an empty array
 
-    const addItem = () => {
-      const newItem = `Item ${items.length + 1}`; // Create a new item
-      setItems([...items, newItem]); // Update the state by adding the new item
-    };
-    const deleteItem = (index) =>{
-        console.log("jndkfb")
-        const updatedItems = items.filter((_, i) => i !== index);
-        setItems(updatedItems);
-    }
+  const addItem = () => {
+    const newItem = `Item ${items.length + 1}`; // Create a new item
+    setItems([...items, newItem]); // Update the state by adding the new item
+  };
+  const deleteItem = (index) => {
+    console.log("jndkfb");
+    const updatedItems = items.filter((_, i) => i !== index);
+    setItems(updatedItems);
+  };
 
   return (
-    <div className='das'>
-    <h1>Dynamic List</h1>
-    <button onClick={addItem}>Add Item</button>
-    <ul className='item-li'>
-      {items.map((item, index) => (
-        <li key={index}>{item} <button onClick={() => deleteItem(index)}>Delete</button>
-        </li> // Render each item in the list
-      ))}
-    </ul>
-  </div>
-  )
-}
+    <div className="das">
+      <div>
+        <Link to="/fetchdata">Hello</Link>
+      </div>
+      <h1>Dynamic List</h1>
+      <button onClick={addItem}>Add Item</button>
+      <ul className="item-li">
+        {items.map((item, index) => (
+          <li key={index}>
+            {item} <button onClick={() => deleteItem(index)}>Delete</button>
+          </li> // Render each item in the list
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-export default Items
+export default Items;
