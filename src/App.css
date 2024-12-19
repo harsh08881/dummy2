@@ -101,3 +101,22 @@ div span {
   font-weight: 800;
   color: #ff0000;             /* Optional: customize text color */
 }
+ 
+.option-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Adds spacing between child elements */
+}
+
+.option-data-container {
+  width: 200px;
+  height: 200px;
+  flex: 0 0 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Optional: Background for better visibility */
+  border: 1px solid #ccc;    /* Optional: Border for clarity */
+}

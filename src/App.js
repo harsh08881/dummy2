@@ -7,6 +7,7 @@ import FetchData from "./Api";
 import Toogle from './Toogle';
 import ErrorPage from "./Error";
 import NotFound from "./NotFound";
+import OptionChain from "./Option";
 import "./App.css"; // For styling
 
 
@@ -25,9 +26,14 @@ const router = createBrowserRouter([
     element: <FetchData />,
   },
   {
+    path: '/o',
+    element:<OptionChain/>,
+  },
+  {
     path: '*',
     element:<NotFound/>,
   },
+
 ]);
 
 
