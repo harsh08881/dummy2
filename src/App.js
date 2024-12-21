@@ -8,6 +8,7 @@ import Toogle from './Toogle';
 import ErrorPage from "./Error";
 import NotFound from "./NotFound";
 import OptionChain from "./Option";
+import BookingForm from "./booking";
 import "./App.css"; // For styling
 
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/o',
     element:<OptionChain/>,
+  },
+  {
+    path: '/book',
+    element:<BookingForm/>,
   },
   {
     path: '*',
