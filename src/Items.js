@@ -1,11 +1,14 @@
-import React from "react";
+import React, { use, useContext } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./Hooks/useOnline";
+import UserContext from "./Hooks/useContext";
 
 const Items = () => {
   const [items, setItems] = useState([]); // Initialize an empty array
 
+  const user = useContext(UserContext);
+  console.log(user);
   const Status = useOnlineStatus();
 
   const addItem = () => {
@@ -24,6 +27,11 @@ const Items = () => {
   return (
    <>
     {Status && <h1>Online</h1>}
+    <div>
+      {
+        <h1> user.name </h1> 
+      }
+    </div>
     <div className="das">
       <div>
         <Link to="/fetchdata">Hello</Link>
