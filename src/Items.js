@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "./Hooks/useOnline";
 
 const Items = () => {
   const [items, setItems] = useState([]); // Initialize an empty array
+
+  const Status = useOnlineStatus();
 
   const addItem = () => {
     const newItem = `Item ${items.length + 1}`; // Create a new item
@@ -14,8 +17,13 @@ const Items = () => {
     const updatedItems = items.filter((_, i) => i !== index);
     setItems(updatedItems);
   };
-
+  
+  if(!Status){
+    return <div className="offline"><span>Offline</span></div>
+  }
   return (
+   <>
+    {Status && <h1>Online</h1>}
     <div className="das">
       <div>
         <Link to="/fetchdata">Hello</Link>
@@ -30,6 +38,7 @@ const Items = () => {
         ))}
       </ul>
     </div>
+    </>
   );
 };
 
