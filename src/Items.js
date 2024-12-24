@@ -29,7 +29,7 @@ const Items = () => {
     {Status && <h1>Online</h1>}
     <div>
       {
-        <h1> user.name </h1> 
+        <h1> {user.name } </h1> 
       }
     </div>
     <div className="das">

@@ -57,3 +57,14 @@ code {
 .form{
   margin: 30px;
   padding: 30px;}
+
+form{
+  padding: 15px;
+  border: 2px solid green;
+  
+}
+
+form button{
+  width: 100%;
+  margin: auto;
+}
