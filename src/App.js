@@ -9,6 +9,7 @@ import ErrorPage from "./Error";
 import NotFound from "./NotFound";
 import OptionChain from "./Option";
 import BookingForm from "./booking";
+import RestaurantsList from "./swiggy";
 import "./App.css"; // For styling
 
 
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
   {
     path: '*',
     element:<NotFound/>,
+  },
+  {
+    path: '/m',
+    element:<Uses/>,
+  },
+  {
+    path: '/swiggy',
+    element:<RestaurantsList/>,
   },
 
 ]);
